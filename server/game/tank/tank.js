@@ -78,7 +78,7 @@ class Tank extends Entity {
 
         this.accelerate(relPos.norm(relPos.mag - this.radius - other.radius).scale(0.2 * other.mass / this.mass));
 
-        if (this.type !== other.type && (this.hp -= other.damage) <= 0) this.remove();
+        if ((this.hp -= other.damage) <= 0) this.remove();
     }
     remove() {
         this.game.tanks.splice(this.game.tanks.indexOf(this), 1);

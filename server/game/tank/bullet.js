@@ -34,7 +34,7 @@ class Bullet extends Entity {
             this.applyForce(relPos.norm(relPos.mag - this.radius - other.radius).scale(0.1 * other.mass));
         }
 
-        if (this.type !== other.type && (this.hp -= other.damage) <= 0) this.remove();
+        if ((this.hp -= other.damage) <= 0) this.remove();
     }
 }
 
