@@ -14,7 +14,7 @@ class Tank extends Entity {
                 {
                     speed: 3,
                     mass: 1,
-                    damage: 0.1,
+                    damage: 5,
                     hp: 50
                 }, // stats
                 this
