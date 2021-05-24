@@ -49,7 +49,7 @@ class Barrel {
         this.game.bullets.push(bullet);
         this.game.entities.push(bullet);
 
-        this.tank.applyForce(vel.scale(-this.bulletMass * 0.01));
+        this.tank.applyForce(vel.scale(-this.bulletMass * 0.5));
     }
 }
 
