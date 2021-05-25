@@ -17,10 +17,6 @@ class Bullet extends Entity {
         }
         super.update();
     }
-    remove() {
-        this.game.bullets.splice(this.game.bullets.indexOf(this), 1);
-        super.remove();
-    }
     /** @param {Entity} other */
     collide(other) {
         if (other === this) return;
@@ -35,6 +31,10 @@ class Bullet extends Entity {
         }
 
         if ((this.hp -= other.damage) <= 0) this.remove();
+    }
+    remove() {
+        this.game.bullets.splice(this.game.bullets.indexOf(this), 1);
+        super.remove();
     }
 }
 
